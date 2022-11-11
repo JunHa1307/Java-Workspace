@@ -1,0 +1,6 @@
+package com.kh.practice.chap01;
+import com.kh.practice.chap01.*;
+public class Run {
+	ControlPractice cp1 = new ControlPractice();
+	cp1.practice1();
+}

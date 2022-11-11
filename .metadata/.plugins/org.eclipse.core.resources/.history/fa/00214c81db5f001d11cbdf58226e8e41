@@ -1,0 +1,21 @@
+package com.kh.operator;
+
+public class F_Logical {
+	/*
+	 * 논리 연산자
+	 * 두개의 논리값을 연산하는 연산자
+	 * 논리값 (논리연산자) 논리값 => 결과값도 논리값
+	 * 
+	 * AND연산자: 논리값 && 논리값
+	 * 			왼쪽, 오른쪽 논리값이 둘다 TRUE여야 최종결과 TRUE 가 반환됨
+	 * 
+	 * OR 연산자: 논리값 || 논리값
+	 * 			왼쪽과 오른쪽 논리값 중 어느하나라도 TRUE면 최종결과가 TRUE
+	 * 
+	 */
+	public void method() {
+		
+		
+	}
+	
+}

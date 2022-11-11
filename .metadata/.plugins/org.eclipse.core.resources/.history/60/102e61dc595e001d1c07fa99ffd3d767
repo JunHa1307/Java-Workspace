@@ -1,0 +1,13 @@
+package com.kh.practice1.run;
+
+import com.kh.practice1.func.VariablePravtice1;
+
+public class Run {
+	
+	public static void main (String[]args) {
+		
+		VariablePractice1 vp = new VariablePractice1();
+		vp.test1();
+	}
+	
+}

@@ -1,0 +1,6 @@
+package com.kh.practice2.run;
+import com.kh.practice2.func.*;
+public class Run {
+	CastingPractice cp = new CastingPractice();
+	cp.practice1();
+}

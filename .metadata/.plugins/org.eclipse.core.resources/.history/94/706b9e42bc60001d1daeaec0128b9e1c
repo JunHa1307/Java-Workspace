@@ -1,0 +1,8 @@
+package com.kh.practice.chap01;
+
+public class ControlPractice {
+	public void practice1(){
+		
+		System.out.printf("1.입력\n2.수정\n3.조회\n4.삭제\n5.종료");
+	}
+}

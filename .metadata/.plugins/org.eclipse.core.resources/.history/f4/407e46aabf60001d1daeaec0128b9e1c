@@ -1,0 +1,98 @@
+package com.kh.practice.chap01;
+
+import java.util.Scanner;
+
+public class ControlPractice {
+	public void practice1(){
+		
+		System.out.printf("1.입력\n2.수정\n3.조회\n4.삭제\n5.종료\n");
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.print("메뉴 번호를 입력하세요 : ");
+		int num = sc.nextInt();
+		String menu = "";
+		
+		if(num == 1) {
+			menu = "입력";
+		}else if (num == 2) {
+			menu = "수정";
+		}else if (num == 3) {
+			menu = "조회";
+		}else if (num == 4) {
+			menu = "삭제";
+		}else if (num == 5) {
+			menu = "종료";
+		}
+		System.out.printf("%s 메뉴 입니다.", menu);
+	}
+	public void practice2(){
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.print("숫자를 한개 입력하세요 : ");
+		int num = sc.nextInt();
+		
+		if(num>0) {
+			if((num%2)==0) {
+				System.out.println("짝수다.");
+			}else System.out.println("홀수다.");
+		}else System.out.println("양수만 입력해주세요.");
+		
+	}
+	public void practice3(){
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.print("국어 점수 : ");
+		int num1 = sc.nextInt();
+		System.out.print("영어 점수 : ");
+		int num2 = sc.nextInt();
+		System.out.print("수학 점수 : ");
+		int num3 = sc.nextInt();
+		
+		double avg = (num1+num2+num3)/3;
+		int sum = (num1+num2+num3);
+		
+		if((num1>39 &&num2 >39&& num3 >39)&&avg>59) {
+			System.out.println("국어 점수 : "+ num1);
+			System.out.println("영어 점수 : "+ num2);
+			System.out.println("수학 점수 : "+ num3);
+			System.out.println("합계 : "+ sum);
+			System.out.println("평균 : "+ avg);
+			System.out.println("축하합니다, 합격입니다!");
+		}else System.out.println("불합격입니다.");
+		
+	}
+	public void practice4(){
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("1 ~ 12월 사이의 정수입력 : ");
+		int month = sc.nextInt();
+		
+		String season = "";
+		
+		switch (month) {
+		case 1:
+		case 2:
+		case 12: season = "겨울";break;
+		case 3:
+		case 4:
+		case 5: season = "봄";break;
+		case 6:
+		case 7:
+		case 8: season = "여름";break;
+		case 9: season = "가을";break;
+		default: 
+			System.out.println("해당하는 계절이 없습니다.");
+			practice4();
+			return;
+		}
+		
+	}
+	public void practice5(){
+		
+		Scanner sc = new Scanner(System.in);
+		
+		String id = "minmin";
+		String pw = "min1234";
+	}
+}

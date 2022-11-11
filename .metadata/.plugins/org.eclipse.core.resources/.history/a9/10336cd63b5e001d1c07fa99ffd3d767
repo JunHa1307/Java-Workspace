@@ -1,0 +1,19 @@
+package com.kh.variable;
+
+public class A_Variable {
+//시급과 근무 시간과 근무일수를 곱해서 월급을 계산하여 출력하는 메소드
+	public void PrintVariable() {
+		
+		System.out.println("변수 사용 전");
+		System.out.println("시급 : 11000");
+		System.out.println("근무시간: 4");
+		System.out.println("근무일 : 5");
+		
+		//월급 = 시급 x 근무시간 x 근무일
+		//류준하 : 00000원 입니다. 로 출력
+		//*은 곱셈을 나타내는 연산자
+		//서로 다른 자료형 값 여러개를 출력문 하나에 동시에 출력하려면 +로 붙여줘야함
+		System.out.println("류준하 : " + 11000 * 4 * 5 + "원 입니다.");
+	}
+	
+}

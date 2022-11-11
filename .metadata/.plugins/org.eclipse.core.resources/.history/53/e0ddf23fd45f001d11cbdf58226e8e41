@@ -1,0 +1,25 @@
+package com.kh.operator;
+
+public class D_LogicalNegation {
+	
+	//논리 부정 연산자
+	/*
+	 * '!'(단항 연산자) not
+	 * 
+	 * 논리값 (true/false)
+	 * 
+	 * 논리값을 반대로 바꿔주는 연산자
+	 */
+	public void method() {
+		
+		System.out.println("true의 부정 : "+ !true);
+		System.out.println("false의 부정 : "+ !false);
+		
+		
+	
+	}
+	
+	
+	
+	
+}

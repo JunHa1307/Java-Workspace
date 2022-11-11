@@ -1,0 +1,11 @@
+package com.kh.variable;
+
+public class D_printf {
+	
+	/*
+	 * System.out.println(출력하고자 하는 값); => 값을 출력하고 줄바꿈까지 넣어줌
+	 * System.out.print(출력하고자 하는 값); => 값 출력만 해줌
+	 * 
+	 * System.out.printf("출력하고자 하는 형식", 출력하고자 하는 값, 출력하고자 하는 값, ...);
+	 */
+}
