@@ -273,7 +273,7 @@ public class LoopPractice {
 						break;
 					}
 				}
-				if (isPrime == true) {
+				if (isPrime) {
 					System.out.print(i + " ");
 					result++;
 				}
