@@ -27,7 +27,7 @@ public class B_While {
 		int i = 0;//초기식
 		while(i < 5) {//조건식
 			System.out.println("안녕하세요");
-			i++;//증감식
+			i++;//증감식 가장 마지막에 쓸 것
 		}
 		System.out.println("i : "+ i);
 		
