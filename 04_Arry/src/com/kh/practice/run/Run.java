@@ -1,6 +1,7 @@
 package com.kh.practice.run;
 
 import com.kh.practice.array.*;
+import com.kh.practice.dimension.*;
 
 public class Run {
 	public static void main(String[]args) {
@@ -13,7 +14,10 @@ public class Run {
 //		ap.practice6();
 //		ap.practice7();
 //		ap.practice8();
-		ap.practice9();
-	
+//		ap.practice9();
+		DimensionPractice dp = new DimensionPractice();
+//		dp.practice1();
+//		dp.practice2();
+		dp.practice3();
 	}
 }
