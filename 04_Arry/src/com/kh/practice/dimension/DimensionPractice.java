@@ -1,6 +1,5 @@
 package com.kh.practice.dimension;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class DimensionPractice {
@@ -63,7 +62,8 @@ public class DimensionPractice {
 				System.out.printf("%3d ", arr[i][j]);
 			}
 			System.out.println();
-		}
+		}// 3 - 1 3 - 1로 반복문 돌려서 하는 방법이 잇음
+		 // if 안쓰고 랜덤이 나오는대로 [3][j] [i][3] 에 값을 더하고 [3][3]에도 더한다음 *2
 	}
 
 	public void practice5() {
@@ -79,10 +79,9 @@ public class DimensionPractice {
 		}
 		char[][] arr = new char[a][b];
 
-		for (int i = 0; i < arr.length - 1; i++) {
-			for (int j = 0; j < arr.length - 1; j++) {
-				int c = (int) (Math.random() * 25 + 65);
-				arr[i][j] = (char) c;
+		for (int i = 0; i < arr.length; i++) {
+			for (int j = 0; j < arr.length; j++) {
+				arr[i][j] = (char)(int) (Math.random() * 26 + 65);
 				System.out.print(arr[i][j] + " ");
 			}
 			System.out.println();
@@ -93,7 +92,8 @@ public class DimensionPractice {
 
 		String[][] strArr = new String[][] { { "이", "까", "왔", "앞", "힘" }, { "차", "지", "습", "으", "냅" },
 				{ "원", "열", "니", "로", "시" }, { "배", "심", "다", "좀", "다" }, { "열", "히", "! ", "더", "!! " } };
-		for (int i = 0; i < strArr[0].length - 1; i++) {
+				
+		for (int i = 0; i < strArr[0].length; i++) {
 			for (int j = 0; j < strArr.length; j++) {
 				System.out.print(strArr[j][i] + " ");
 			}
@@ -113,7 +113,11 @@ public class DimensionPractice {
 		for (int i = 0; i < arr.length; i++) {
 			for (int j = 0; j < arr[i].length; j++) {
 				arr[i][j] = (char) a;//a를 증가시키면서 배열에 넣기
-				a++;
+				if(a == 'z') {
+					a = 'a';
+				}else {
+					a++;
+				}
 				System.out.print(arr[i][j] + " ");
 			}
 			System.out.println();
@@ -122,7 +126,7 @@ public class DimensionPractice {
 	}
 
 	public void practice8() {
-		String[] arr = new String[] { "강건강", "남나나", "도대담", "류라라", "문미미", "박보배",
+		String[] arr = { "강건강", "남나나", "도대담", "류라라", "문미미", "박보배",
 				"송성실", "윤예의", "진재주", "차천축", "피풍표","홍하하" };
 		String[][] arr2 = new String[3][2];
 		String[][] arr3 = new String[3][2];
@@ -178,9 +182,10 @@ public class DimensionPractice {
 		
 		for (int i =0; i < arr2.length;i++) {
 			for(int j = 0; j<arr2[0].length;j++) {
-				if(name.equals(arr2[i][j])||(name.equals(arr3[i][j]))) {//문자열을 찾았다면
+				if(name.equals(arr2[i][j])||(name.equals(arr3[i][j]))) {//문자열을 찾았다면 
 					System.out.printf("%s학생은 %d분단",name,name.equals(arr2[i][j])?1:2);//1분단 2분단 구분
-					if(i==0){ // 줄 구분
+					if(i==0){ // 줄 구분 
+						//char[] line  ={'첫','두','세'}; line[i] => 줄 구분 가능
 						System.out.print(" 첫 번째 줄");	
 					}else if(i==1) {
 						System.out.print(" 두 번째 줄");	

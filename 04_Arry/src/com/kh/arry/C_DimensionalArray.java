@@ -162,12 +162,13 @@ public class C_DimensionalArray {
 		// 출력예시 : xx 점수 : xx xx xx
 		Scanner sc = new Scanner(System.in);
 		int[][] arr = new int [2][3];
+		
 		System.out.print("국어 점수를 입력하세요 : ");
 		for(int i = 0; i< arr[0].length;i++) {
 			arr[0][i] = sc.nextInt();
 		}
-		System.out.print("영어 점수를 입력하세요 : ");
 		
+		System.out.print("영어 점수를 입력하세요 : ");
 		for(int i = 0; i< arr[0].length;i++) {
 			arr[1][i] = sc.nextInt();
 		}
@@ -179,11 +180,7 @@ public class C_DimensionalArray {
 				System.out.print("국어 점수 : ");
 			}
 			for (int j = 0; j < arr[0].length; j++) {
-				if(i==0) {
-					System.out.print(arr[0][j]+ " ");
-				}else {
-						System.out.print(arr[1][j]+ " ");	
-				}
+					System.out.print(arr[i][j]+ " ");
 			}
 			System.out.println();
 		}
