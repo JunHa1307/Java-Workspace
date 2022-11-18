@@ -19,7 +19,7 @@ public class Student {
 	
 	/*
 	 * 접근제한자 : 이 필드에 접근할 수 있는 범위를 제한 할 수 있음.
-	 * 			(public > protected > default > private)
+	 * 			(public +> protected #> default ~> private-)
 	 * 			클래스 영역 안에서 필드를 선언할 때 반드시 접근제한자를 써 줘야함
 	 */
 	

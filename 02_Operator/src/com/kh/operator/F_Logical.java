@@ -71,7 +71,7 @@ public class F_Logical {
 		 * 실행할때 오류는 나지 않지만 result1 결과값이 어차피 false인대 왜 작성한 구문인지 물어보는 것
 		 */
 		
-		boolean result2 = true || (++num1 > 0);
+		boolean result2 = true;
 		System.out.println(num1);
 		
 	}
