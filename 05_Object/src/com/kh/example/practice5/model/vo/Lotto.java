@@ -1,18 +1,19 @@
 package com.kh.example.practice5.model.vo;
 
 public class Lotto {
-	
+	//필드부
 	private int[] lotto;
-	
-	
-	{
+
+	{//초기화 블록
 		lotto = new int[6];
-		for(int i = 0; i< 6; i++) {
-			lotto[i] = (int)(Math.random()*44+1);
-			if(lotto[i] == lotto[i-1]) {
-				while(true) {
-					lotto[i]=(int)(Math.random()*44+1);
-					if(lotto[i] != lotto[i-1]) {
+		
+		lotto[0] = (int) (Math.random() * 45 + 1);
+		
+		for (int i = 0; i < lotto.length; i++) {
+			for (int j = i + 1; j < lotto.length; j++) {
+				while (true) {//다시 넣기
+					lotto[j] = (int) (Math.random() * 45 + 1);
+					if (lotto[i] != lotto[j]) {//나가기
 						break;
 					}
 				}
@@ -20,6 +21,21 @@ public class Lotto {
 		}
 	}
 	
+	//선언부
+	public Lotto() {}
 	
-	
+	//메소드부
+	public void setLotto(int[] lotto) {
+		this.lotto = lotto;
+	}
+
+	public int[] getLotto() {
+		return lotto;
+	}
+
+	public void infomation() {
+		for (int i = 0; i < lotto.length; i++) {//배열 차례대로 출력
+			System.out.print(lotto[i] + " ");
+		}
+	}
 }

@@ -53,7 +53,7 @@ public class Run {
 	 *    				  String값도 보관하고, int 값도 보관하고, double 값도 보관할수있는 나만의 자료형을 만들 수 있음.
 	 *    			클래스 : 각 객체들의 속성 정보들을 담아내는 그릇과도 같은 존재. 보통 vo패키지 안에 보관한다.
 	 *    
-	 *    			public class Student{
+	 *    			public class Student(){
 	 *    				String name = "민경민"'
 	 *    				int age = 30;
 	 *    				double height = 188.8;
