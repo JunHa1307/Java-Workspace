@@ -9,11 +9,11 @@ public class Lotto {
 		
 		lotto[0] = (int) (Math.random() * 45 + 1);
 		
-		for (int i = 0; i < lotto.length; i++) {
+		for (int i = 0; i < lotto.length; i++) {//생성
 			for (int j = i + 1; j < lotto.length; j++) {
-				while (true) {//다시 넣기
+				while (true) {// 랜덤값 대입
 					lotto[j] = (int) (Math.random() * 45 + 1);
-					if (lotto[i] != lotto[j]) {//나가기
+					if (lotto[i] != lotto[j]) {//검사 후 나가기
 						break;
 					}
 				}
