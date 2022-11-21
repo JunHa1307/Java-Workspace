@@ -5,6 +5,7 @@ import com.kh.example.practice6.model.vo.Book;
 public class Run {
 
 	public static void main(String[] args) {
+		
 		Book bk = new Book();
 		bk.inform();
 		Book reader = new Book("전독시","네이버","싱숑");
