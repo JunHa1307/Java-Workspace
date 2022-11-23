@@ -46,15 +46,19 @@ public class ObjectArrayRun {
 //		}
 		
 //		 만약 일치하는 도서를 찾지 못한경우 "검색된 도서가 없습니다" 출력
-		
+		int count = 0;
 		for(int i = 0; i < arr.length; i++) {
 			if(arr[i].getTitle().equals(searchTitle)) {
 				System.out.println(arr[i].getPrice());
-			}else {
-				System.out.println("검색된 도서가 없습니다.");
+				count++;
+				break;
+				// 책의 제목이 중복되지 않은 이상 break문을 걸어주게 되면
+				//찾고자하는 책을 찾고나서 더이상 반복문을 실행시키지 않음
 			}
 		}
-		
+		if(count == 0) {
+			System.out.println("검색된 도서가 없습니다");
+		}
 	}
 	
 	
