@@ -11,7 +11,7 @@ public class MemberController {
 		int count = 0;
 		for(int i = 0; i <m.length;i++) {
 			if(m[i] != null) {
-				if(m[i].getId()!= null) {
+				if(m[i].getId() != null) {	
 					count++;
 				}
 			}
@@ -35,9 +35,8 @@ public class MemberController {
 		}
 		return judge;
 	}
-	
+	int i = 0;
 	public void insertMember(String id, String name, String password, String email, char gender, int age) {
-		int i = 0;
 		m[i] = new Member(id,name,password,email,gender,age);
 		i++;
 	}
@@ -120,34 +119,19 @@ public class MemberController {
 	}
 	
 	public boolean delete(String id) {
-		int index = 0;
-		for(Member man : m) {
-			if(man != null) {
-				if(man.getId().equals(id)){
-					m[index].setId(null);
-					m[index].setName(null);
-					m[index].setPassword(null);
-					m[index].setEmail(null);
-					m[index].setGender('\0');
-					m[index].setAge(0);
+		for(int i =0; i <SIZE;i++) {
+			if(m[i] != null) {
+				if(m[i].getId().equals(id)){
+					m[i] = null;
 					return true;
 				}
-			}index ++;
+			}
 		}
 		return false;
 	}
 	
 	public void delete() {
-		for(Member man : m) {
-			if(man != null) {
-				man.setId(null);
-				man.setName(null);
-				man.setPassword(null);
-				man.setEmail(null);
-				man.setGender('\0');
-				man.setAge(0);
-			}
-		}
+		m = new Member[SIZE];
 		System.out.println("성공적으로 삭제하였습니다.");
 	}
 	

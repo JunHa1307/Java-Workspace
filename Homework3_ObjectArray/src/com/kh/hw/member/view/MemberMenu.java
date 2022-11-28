@@ -16,7 +16,7 @@ public class MemberMenu {
 	
 	public void mainMenu() {
 		while(true) {
-			System.out.printf("최대 등록 가능한 회원 수는 %d명입니다\n",(mc.SIZE - mc.existMemberNum()));
+			System.out.printf("최대 등록 가능한 회원 수는 %d명입니다\n", MemberController.SIZE );
 			System.out.printf("현재 등록된 회원 수는 %d명입니다.\n",mc.existMemberNum());
 			if(mc.existMemberNum()<10) {
 				System.out.println("1. 새 회원 등록");
@@ -39,7 +39,7 @@ public class MemberMenu {
 					insertMember();break;
 				}
 				default: System.out.println("잘못 입력하셨습니다. 다시 입력해주세요.\n");break;
-				case 9: return;
+				case 9: System.out.println("프로그램을 종료합니다.");return;
 			}
 		}
 		
@@ -50,7 +50,6 @@ public class MemberMenu {
 		sc.nextLine();
 		System.out.print("아이디 : ");
 		String id = sc.nextLine();
-		mc.checkId(id);
 		while(mc.checkId(id)) {
 			System.out.println("중복된 아이디입니다. 다시 입력해주세요.");
 			String rename = sc.nextLine();
@@ -62,19 +61,19 @@ public class MemberMenu {
 		String password = sc.nextLine();
 		System.out.print("이메일 : ");
 		String email = sc.nextLine();
-		System.out.print("성별(M/F) : ");
-		char gender = sc.nextLine().charAt(0);
-		while(gender != 'm'&&gender != 'M'&&gender != 'f'&&gender != 'F') {
-			System.out.println("성별을 다시 입력하세요");
+		char gender;
+		while(true) {
 			System.out.print("성별(M/F) : ");
-			char regender = sc.nextLine().charAt(0);
-			gender = regender;
+			gender = sc.nextLine().charAt(0);
+			if(gender == 'm' || gender == 'M' || gender == 'f' || gender == 'F') {
+				break;
+			}else {
+				System.out.println("성별을 다시 입력하세요.");
+			}
 		}
 		System.out.print("나이 : ");
 		int age = sc.nextInt();
-		
 		mc.insertMember(id, name, password, email, gender, age);
-		mc.existMemberNum();
 	}
 	
 	public void searchMember() {
@@ -100,7 +99,7 @@ public class MemberMenu {
 		String result = mc.searchId(id);
 		if(result != null){
 			System.out.println("찾으신 회원 조회 결과입니다.\n"
-					+ result+"\n");
+										+ result+"\n");
 		}else {
 			System.out.println("결과가 없습니다.\n");
 		}
@@ -223,7 +222,6 @@ public class MemberMenu {
 				System.out.println("존재하지 않는 아이디입니다.\n");
 			}
 		}
-		mc.existMemberNum();
 	}
 	
 	public void deleteAll() {
@@ -232,9 +230,7 @@ public class MemberMenu {
 		char ok = sc.nextLine().charAt(0);
 		if(ok == 'y' || ok == 'Y') {
 			mc.delete();
-			System.out.println("성공적으로 삭제하였습니다.\n");
 		}
-		mc.existMemberNum();
 	}
 	
 	public void printAll() {
