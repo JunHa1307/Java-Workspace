@@ -1,13 +1,13 @@
 package com.kh.practice.chap02_abstractNIterface.model.vo;
 
-public abstract class SmartPhone implements CellPhone, TouchDisplay{
-	
+public abstract class SmartPhone implements CellPhone, TouchDisplay {
+
 	private String maker;
 
 	public SmartPhone() {
 		super();
 	}
-	
+
 	public abstract String printInformation();
 
 	public String getMaker() {
@@ -17,7 +17,5 @@ public abstract class SmartPhone implements CellPhone, TouchDisplay{
 	public void setMaker(String maker) {
 		this.maker = maker;
 	}
-	
-	
-	
+
 }

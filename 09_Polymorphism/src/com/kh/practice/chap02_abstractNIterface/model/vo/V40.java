@@ -47,7 +47,4 @@ public class V40 extends SmartPhone implements NotePen{
 				+ touch() + "\n"
 				+ "블루투스 펜 탑재 여부 : "+bluetoothPen() +"\n";
 	}
-	
-	
-	
 }
