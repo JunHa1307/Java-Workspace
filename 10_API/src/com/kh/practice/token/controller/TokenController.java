@@ -10,24 +10,26 @@ public class TokenController {
 
 	public String afterToken(String str) {
 		StringTokenizer st = new StringTokenizer(str," ");
+		str = "";
 		while(st.hasMoreTokens()) {
-			str.concat(st.nextToken());
+			str += st.nextToken();
 		}
 		return str;
 	}
 	
 	public String firstCap(String input) {
-		input.toUpperCase().charAt(0);
-		return input;
+		char[] arr = input.toCharArray();
+		arr[0] = input.toUpperCase().charAt(0);
+		return String.valueOf(arr);
 	}
 	
-	public void findChar(String input, char one) {
+	public int findChar(String input, char one) {
 		int count = 0;
 		for(char arr : input.toCharArray()) {
 			if(arr == one) {
 			count++;	
 			}
 		}
-		System.out.printf("%c 문자가 들어간 개수 : %d\n", one, count);
+		return count;
 	}
 }
