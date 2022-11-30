@@ -10,11 +10,11 @@ public class TokenController {
 
 	public String afterToken(String str) {
 		StringTokenizer st = new StringTokenizer(str," ");
-		str = "";
+		StringBuilder str1 = new StringBuilder();
 		while(st.hasMoreTokens()) {
-			str += st.nextToken();
+			str1.append(st.nextToken());
 		}
-		return str;
+		return str1.toString();
 	}
 	
 	public String firstCap(String input) {
