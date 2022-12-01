@@ -54,21 +54,20 @@ public class PersonMenu {
 		switch (menuNum) {
 		case 2:
 			printStudent();
-			System.out.println();
 			break;
 		case 9:
-			System.out.println("메인으로 돌아갑니다.\n");
+			System.out.println("메인으로 돌아갑니다.");
 			return;
 		case 1:
 			if (pc.personCount()[0] < 3) {
 				insertStudent();
-				System.out.println();
 				break;
 			}
 		default:
-			System.out.println("잘못 입력하셨습니다. 다시 입력해주세요\n");
+			System.out.println("잘못 입력하셨습니다. 다시 입력해주세요");
 			studentMenu();
 		}
+		System.out.println();
 	}
 
 	public void employeeMenu() {
@@ -86,22 +85,20 @@ public class PersonMenu {
 		switch (menuNum) {
 		case 2:
 			printEmployee();
-			System.out.println();
 			break;
 		case 9:
-			System.out.println("메인으로 돌아갑니다.\n");
+			System.out.println("메인으로 돌아갑니다.");
 			return;
 		case 1:
 			if (pc.personCount()[1] < 3) {
 				insertEmployee();
-				System.out.println();
-				;
 				break;
 			}
 		default:
-			System.out.println("잘못 입력하셨습니다. 다시 입력해주세요\n");
+			System.out.println("잘못 입력하셨습니다. 다시 입력해주세요");
 			studentMenu();
 		}
+		System.out.println();
 	}
 
 	public void insertStudent() {
@@ -125,9 +122,9 @@ public class PersonMenu {
 			return;
 		} else if (pc.personCount()[0] < 3) {
 			System.out.print("그만하시려면 N(또는 n), 이어하시려면 아무 키나 누르세요 : ");
-			char ctn = sc.nextLine().charAt(0);
-			if (ctn != 'N' && ctn != 'n') {
-				insertStudent();
+			char ctn = sc.nextLine().toUpperCase().charAt(0);
+			if (ctn == 'N') {
+				return;
 			}
 		}
 	}
