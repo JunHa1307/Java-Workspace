@@ -1,6 +1,8 @@
 package com.kh.chap01_list.part01_arrayList.run;
 
+
 import java.util.ArrayList;
+import java.util.List;
 
 import com.kh.chap01_list.part01_arrayList.model.vo.Music;
 
@@ -47,14 +49,14 @@ public class ListRun {
 		 * 
 		 * List계열 => 담고자 하는 값(value)만 저장/ 값 저장 시 순서유지됨(index의 개념이 있음) / 중복값 허용
 		 * 				ex) ArrayList, Vector, LinkedList => ArrayList가 제일 많이 쓰임(90%)이상
-		 * Set계열 => 담고자 하는 값( value)만 저장/ 값 저장 시 순서유지 안됨(index개념이 없음) / 중복값 허용 안함
+		 * Set계열 => 담고자 하는 값(value)만 저장/ 값 저장 시 순서유지 안됨(index개념이 없음) / 중복값 허용 안함
 		 * 				ex) HashSet, TreeSet
 		 * Map계열 => 키(Key) + 담고자 하는 값(value)세트로 저장 / 값 저장시 순서 유지 안됨 (index개념 없음)
 		 * 			/ Key 중복 허용 안함
 		 * 				ex) HashMap, Properties
 		 */
 		
-		ArrayList<Music> list = new ArrayList<>(3);// 내부적으로 크기 10짜리 배열이 생성됨
+		ArrayList<Music> list = new ArrayList<>(3);// 내부적으로 크기 10짜리 배열이 생성됨 3 <= 크기 지정(근데 어차피 늘어나서 별 상관없음)
 		
 		System.out.println(list);
 		
@@ -125,6 +127,33 @@ public class ListRun {
 			System.out.println(o);
 		}
 		
+		System.out.println("========================================================");
+		
+//		7. subList(int index1, int index2) : 해당 리스트로부터 index1에서 index2까지의 데이터 값들을
+//											  추출해서 새로운 List로 변환시켜주는 메소드
+		List<Music> sub = list.subList(0, 2); // 0 <= 인덱스 범위 < 2 
+		System.out.println(sub);
+		
+		System.out.println("========================================================");
+		
+//		8. addAll(Collection c) : 해당 리스트에 다른 컬랙션에 있는 데이터들을 통째로 추가해주는 메소드
+		
+		list.addAll(sub);
+		System.out.println(list);
+		
+		System.out.println("========================================================");
+		
+//		9. isEmpty() : 해당 리스트가 비어있는지 묻는 메소드(비어있으면 true/ 비어있지 않다면 false반환)
+		
+		System.out.println("리스트가 비었습니까? : " + list.isEmpty());
+		
+		System.out.println("========================================================");
+		
+//		10. clear() : 해당 리스트를 비워주는 메소드
+		list.clear();
+		System.out.println(list);
+		System.out.println("리스트가 비었습니까? : " + list.isEmpty());
+
 	}
 
 }
