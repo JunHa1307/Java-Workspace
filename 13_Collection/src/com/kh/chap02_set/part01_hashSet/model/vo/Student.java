@@ -41,30 +41,62 @@ public class Student {
 	public String toString() {
 		return "Student [name=" + name + ", age=" + age + ", score=" + score + "]";
 	}
-	
-	@Override
-	public boolean equals(Object obj) {
-		// Student 객체.equals(비교할 Student){
-		// 		this			other
-		
-		// this => 현재 객체
-		Student other = (Student)obj;
-		if(this.age == other.age && this.score == other.score && this.name.equals(other.name)) {
-			
-			return true;
-		}else {
-			
-		return false;
-		}
-		
-	}
 
 	// hashcode 메소드 재정의 : 필드값을 가지고 해시코드를 만들어서 반환하도록 재정의
 	@Override
 	public int hashCode() {
-		String hash = name + age + score;
-		return hash.hashCode();
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + age;
+		result = prime * result + ((name == null) ? 0 : name.hashCode());
+		result = prime * result + score;
+		return result;
 	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Student other = (Student) obj;
+		if (age != other.age)
+			return false;
+		if (name == null) {
+			if (other.name != null)
+				return false;
+		} else if (!name.equals(other.name))
+			return false;
+		if (score != other.score)
+			return false;
+		return true;
+	}
+	
+//	@Override
+//	public boolean equals(Object obj) {
+//		// Student 객체.equals(비교할 Student){
+//		// 		this			other
+//		
+//		// this => 현재 객체
+//		Student other = (Student)obj;
+//		if(this.age == other.age && this.score == other.score && this.name.equals(other.name)) {
+//			
+//			return true;
+//		}else {
+//			
+//		return false;
+//		}
+//		
+//	}
+
+	// hashcode 메소드 재정의 : 필드값을 가지고 해시코드를 만들어서 반환하도록 재정의
+//	@Override
+//	public int hashCode() {
+//		String hash = name + age + score;
+//		return hash.hashCode();
+//	}
 	
 	
 	
